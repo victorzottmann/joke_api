@@ -33,6 +33,12 @@ class JokesController < ApplicationController
     render json: 204
   end
 
+  def random
+    offset = rand(Joke.count)
+    @joke = Joke.offset(offset).first
+    render json: @joke, status: 200
+  end
+
   private
     def joke_params
       params.require(:joke).permit(:category_id, :body)
