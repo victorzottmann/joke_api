@@ -51,8 +51,26 @@ POST http://localhost:3000/api/auth/sign_up
 Content-Type: application/json
 
 {
-  "username": "victor_2",
-  "email": "victor2@test.com",
-  "password": "password2",
-  "password_confirmation": "password2"
+  "username": "victor_3",
+  "email": "victor3@test.com",
+  "password": "password3",
+  "password_confirmation": "password3"
+}
+
+### Sign in with correct details
+POST http://localhost:3000/api/auth/sign_in
+Content-Type: application/json
+
+{
+  "email": "victor3@test.com",
+  "password": "password3"
+}
+
+### Sign in with incorrect details
+POST http://localhost:3000/api/auth/sign_in
+Content-Type: application/json
+
+{
+  "email": "victor3@test.com",
+  "password": "whatever"
 }
