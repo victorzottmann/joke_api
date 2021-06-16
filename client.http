@@ -4,6 +4,7 @@ GET http://localhost:3000/api/jokes
 ### Successfully posts a joke
 POST http://localhost:3000/api/jokes
 Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjM5NDAyMzMsInN1YiI6M30.nUNY2EaHNaDvndD4VCLTKjUr7Vbw38EKlGeXTuKwcls
 
 {
   "category_id": 1,
@@ -27,6 +28,7 @@ GET http://localhost:3000/api/jokes/1000
 ### Successfully update joke 1
 PUT http://localhost:3000/api/jokes/1
 Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjM5NDA2MDIsInN1YiI6MX0.1YMK5UFrWUoQeqU9x2DYytN9yPQfls-bZFg1Vyjs6B0
 
 {
   "category_id": 2,
@@ -45,6 +47,10 @@ GET http://localhost:3000/api/jokes/random?category=puns
 ### Unsuccessful random joke
 GET http://localhost:3000/api/jokes/random?category=hfjdkfhks
 
+### Destroy joke I have permission for
+DELETE http://localhost:3000/api/jokes/1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjM5NDA2MDIsInN1YiI6MX0.1YMK5UFrWUoQeqU9x2DYytN9yPQfls-bZFg1Vyjs6B0
+
 
 ### Create user
 POST http://localhost:3000/api/auth/sign_up
@@ -62,8 +68,8 @@ POST http://localhost:3000/api/auth/sign_in
 Content-Type: application/json
 
 {
-  "email": "victor3@test.com",
-  "password": "password3"
+  "email": "victor@test.com",
+  "password": "password1"
 }
 
 ### Sign in with incorrect details
