@@ -20,7 +20,7 @@ Content-Type: application/json
 }
 
 ### Show joke id: 1
-GET http://localhost:3000/api/jokes/1
+GET http://localhost:3000/api/jokes/3
 
 ### Unsuccessfully show joke id: 1000
 GET http://localhost:3000/api/jokes/1000

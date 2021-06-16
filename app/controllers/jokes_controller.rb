@@ -17,7 +17,7 @@ class JokesController < ApplicationController
   end
 
   def show
-    render json: @joke
+    render json: @joke.transform_joke
   end
 
   def update
