@@ -44,3 +44,15 @@ GET http://localhost:3000/api/jokes/random?category=puns
 
 ### Unsuccessful random joke
 GET http://localhost:3000/api/jokes/random?category=hfjdkfhks
+
+
+### Create user
+POST http://localhost:3000/api/auth/sign_up
+Content-Type: application/json
+
+{
+  "username": "victor_2",
+  "email": "victor2@test.com",
+  "password": "password2",
+  "password_confirmation": "password2"
+}
